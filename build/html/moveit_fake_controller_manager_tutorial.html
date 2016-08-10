@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Controller Manager Tutorials &mdash; MoveIt! Motion Planning Framework Indigo documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/override.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="MoveIt! Motion Planning Framework Indigo documentation" href="index.html"/>
+        <link rel="next" title="Kinematics/Parameters" href="kinematics_configuration.html"/>
+        <link rel="prev" title="Motion Planners/C++ API" href="planning_pipeline_tutorial.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home">
+        
+
+          MoveIt! Motion Planning Framework
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="move_group_interface_tutorial.html">Move Group Interface/C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="move_group_interface_tutorial.html#the-entire-code">The entire code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move_group_interface_tutorial.html#compiling-the-code">Compiling the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move_group_interface_tutorial.html#the-launch-file">The launch file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move_group_interface_tutorial.html#running-the-code">Running the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move_group_interface_tutorial.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="move_group_python_interface_tutorial.html">Move Group Interface/Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="move_group_python_interface_tutorial.html#the-entire-code">The entire code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move_group_python_interface_tutorial.html#the-launch-file">The launch file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="move_group_python_interface_tutorial.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="moveit_setup_assistant_tutorial.html">Setup Assistant Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#pre-requisites">Pre-requisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#step-1-start">STEP 1: Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#step-2-generate-self-collision-matrix">STEP 2: Generate Self-Collision Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#step-3-add-virtual-joints">STEP 3: Add Virtual Joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#step-4-add-planning-groups">STEP 4: Add Planning Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#step-5-add-robot-poses">STEP 5: Add Robot Poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#step-6-label-end-effectors">STEP 6: Label End Effectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#step-7-add-passive-joints">STEP 7: Add Passive Joints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#step-8-generate-configuration-files">STEP 8: Generate Configuration Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#what-s-next">What&#8217;s Next</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moveit_setup_assistant_tutorial.html#additional-reading">Additional Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="visualization_tutorial.html">MoveIt! RViz Plugin Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualization_tutorial.html#pre-requisites">Pre-requisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization_tutorial.html#step-1-launch-the-demo-and-configure-the-plugin">STEP 1: Launch the demo and Configure the Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization_tutorial.html#step-2-play-with-the-visualized-robots">STEP 2: Play with the visualized robots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization_tutorial.html#step-3-interact-with-the-pr2">STEP 3: Interact with the PR2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization_tutorial.html#moving-into-collision">Moving into collision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization_tutorial.html#moving-out-of-reachable-workspace">Moving out of reachable workspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization_tutorial.html#step-4-use-motion-planning-with-the-pr2">STEP 4: Use Motion Planning with the PR2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization_tutorial.html#what-s-next">What&#8217;s Next</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kinematics_tutorial.html">Kinematics/C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kinematics_tutorial.html#the-robotmodel-and-robotstate-classes">The RobotModel and RobotState classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_tutorial.html#the-entire-code">The entire code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_tutorial.html#compiling-the-code">Compiling the code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_tutorial.html#the-launch-file">The launch file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_tutorial.html#running-the-code">Running the code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_tutorial.html#expected-output">Expected Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_tutorial.html#additional-reading">Additional Reading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ikfast_tutorial.html">IKFast Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#what-is-ikfast">What is IKFast?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#moveit-ikfast">MoveIt! IKFast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#pre-requisites">Pre-requisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#moveit-ikfast-installation">MoveIt! IKFast Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#openrave-installation">OpenRAVE Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#create-collada-file-for-use-with-openrave">Create Collada File For Use With OpenRave</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikfast_tutorial.html#create-ikfast-solution-cpp-file">Create IKFast Solution CPP File</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#select-ik-type">Select IK Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#choose-planning-group">Choose Planning Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ikfast_tutorial.html#identify-link-numbers">Identify Link Numbers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ikfast_tutorial.html#generate-ik-solver">Generate IK Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikfast_tutorial.html#create-plugin">Create Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikfast_tutorial.html#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikfast_tutorial.html#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikfast_tutorial.html#test-the-plugin">Test the Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ikfast_tutorial.html#updating-the-plugin">Updating the Plugin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="planning_scene_tutorial.html">Planning Scene/C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_tutorial.html#the-entire-code">The entire code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_tutorial.html#compiling-the-code">Compiling the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_tutorial.html#the-launch-file">The launch file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_tutorial.html#running-the-code">Running the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_tutorial.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="planning_scene_ros_api_tutorial.html">Planning Scene/ROS API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_ros_api_tutorial.html#the-entire-code">The entire code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_ros_api_tutorial.html#compiling-the-code">Compiling the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_ros_api_tutorial.html#the-launch-file">The launch file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_ros_api_tutorial.html#running-the-code">Running the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_scene_ros_api_tutorial.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="motion_planning_api_tutorial.html">Motion Planners/C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="motion_planning_api_tutorial.html#the-entire-code">The entire code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion_planning_api_tutorial.html#compiling-the-code">Compiling the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion_planning_api_tutorial.html#the-launch-file">The launch file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion_planning_api_tutorial.html#running-the-code">Running the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motion_planning_api_tutorial.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="planning_pipeline_tutorial.html">Motion Planners/C++ API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="planning_pipeline_tutorial.html#the-entire-code">The entire code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_pipeline_tutorial.html#compiling-the-code">Compiling the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_pipeline_tutorial.html#the-launch-file">The launch file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_pipeline_tutorial.html#running-the-code">Running the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="planning_pipeline_tutorial.html#expected-output">Expected Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Controller Manager Tutorials</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kinematics_configuration.html">Kinematics/Parameters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kinematics_configuration.html#the-kinematics-yaml-file">The kinematics.yaml file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_configuration.html#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_configuration.html#the-kdl-kinematics-plugin">The KDL Kinematics Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinematics_configuration.html#the-lma-kinematics-plugin">The LMA Kinematics Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics_configuration.html#position-only-ik">Position Only IK</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perception_configuration.html">3D Perception/Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perception_configuration.html#yaml-configuration-file-point-cloud">YAML Configuration file (Point Cloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception_configuration.html#yaml-configuration-file-depth-map">YAML Configuration file (Depth Map)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perception_configuration.html#update-the-launch-file">Update the launch file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="perception_configuration.html#add-the-yaml-file-to-the-launch-script">Add the YAML file to the launch script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="perception_configuration.html#octomap-configuration">Octomap Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="controller_configuration.html">Controllers/Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="controller_configuration.html#yaml-configuration">YAML Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller_configuration.html#followjointtrajectory-controller-interface">FollowJointTrajectory Controller Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller_configuration.html#grippercommand-controller-interface">GripperCommand Controller Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller_configuration.html#create-the-controller-launch-file">Create the Controller launch file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller_configuration.html#debugging-information">Debugging Information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ompl_interface_tutorial.html">OMPL Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ompl_interface_tutorial.html#ompl-optimization-objective-tutorial">OMPL Optimization Objective Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ompl_interface_tutorial.html#source-install-for-ompl-within-catkin-workspace">Source Install For OMPL Within Catkin Workspace</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MoveIt! Motion Planning Framework</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+
+        <div class="header-override">
+          <p>
+            <a href="http://moveit.ros.org/">MoveIt! Website</a><br/>
+            <a href="http://moveit.ros.org/blog">Blog</a>
+          </p>
+          <a href="http://moveit.ros.org"><img src="_static/logo.png"></a>
+        </div>
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Controller Manager Tutorials</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/davetcoleman/moveit_docs/blob/master/source/moveit_fake_controller_manager_tutorial.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="controller-manager-tutorials">
+<h1>Controller Manager Tutorials<a class="headerlink" href="#controller-manager-tutorials" title="Permalink to this headline">¶</a></h1>
+<p>MoveIt! comes with a series of fake trajectory controllers to be used in simulation.
+For example, the <code class="docutils literal"><span class="pre">demo.launch</span></code> generated by MoveIt&#8217;s setup assistant, employs fake controllers for nice visualization in rviz.</p>
+<p>For configuration, edit the file <code class="docutils literal"><span class="pre">config/fake_controllers.yaml</span></code>, and adjust the desired controller type.
+The following controllers are available:</p>
+<ul class="simple">
+<li><strong>interpolate</strong>: perform smooth interpolation between via points - the default for visualization</li>
+<li><strong>via points</strong>:  traverse via points, w/o interpolation in between - useful for visual debugging</li>
+<li><strong>last point</strong>:  warp directly to the last point of the trajectory - fastest method for offline benchmarking</li>
+</ul>
+<div class="code yaml highlight-default"><div class="highlight"><pre><span></span><span class="n">rate</span><span class="p">:</span> <span class="mi">10</span> <span class="p">(</span><span class="n">Hz</span><span class="p">,</span> <span class="n">used</span> <span class="k">for</span> <span class="n">interpolation</span> <span class="n">controller</span><span class="p">)</span>
+<span class="n">controller_list</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">fake_arm_controller</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="n">interpolate</span> <span class="o">|</span> <span class="n">via</span> <span class="n">points</span> <span class="o">|</span> <span class="n">last</span> <span class="n">point</span>
+    <span class="n">joints</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">joint_1</span>
+      <span class="o">-</span> <span class="n">joint_2</span>
+      <span class="o">-</span> <span class="n">joint_3</span>
+      <span class="o">-</span> <span class="n">joint_4</span>
+      <span class="o">-</span> <span class="n">joint_5</span>
+      <span class="o">-</span> <span class="n">joint_6</span>
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">fake_gripper_controller</span>
+    <span class="n">joints</span><span class="p">:</span>
+      <span class="p">[]</span>
+</pre></div>
+</div>
+<p>In order to load an initial pose, one can have a list of (group, pose) pairs as follows:</p>
+<div class="code yaml highlight-default"><div class="highlight"><pre><span></span><span class="n">initial</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">group</span><span class="p">:</span> <span class="n">arm</span>
+    <span class="n">pose</span><span class="p">:</span>  <span class="n">home</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kinematics_configuration.html" class="btn btn-neutral float-right" title="Kinematics/Parameters" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="planning_pipeline_tutorial.html" class="btn btn-neutral" title="Motion Planners/C++ API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright .
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'Indigo',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
