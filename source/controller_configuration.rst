@@ -46,7 +46,7 @@ FollowJointTrajectory Controller Interface
 ------------------------------------------
 The parameters are:
  * *name*: The name of the controller.  (See debugging information below for important notes).
- * *action_ns*: The action namespace for the controller. (See debugging information below for important notes). 
+ * *action_ns*: The action namespace for the controller. (See debugging information below for important notes).
  * *type*: The type of action being used (here FollowJointTrajectory).
  * *default*: The default controller is the primary controller chosen by MoveIt! for communicating with a particular set of joints.
  * *joints*: Names of all the joints that are being addressed by this interface.
@@ -55,7 +55,7 @@ GripperCommand Controller Interface
 -----------------------------------
 The parameters are:
  * *name*: The name of the controller.  (See debugging information below for important notes).
- * *action_ns*: The action namespace for the controller. (See debugging information below for important notes). 
+ * *action_ns*: The action namespace for the controller. (See debugging information below for important notes).
  * *type*: The type of action being used (here GripperCommand).
  * *default*: The default controller is the primary controller chosen by MoveIt! for communicating with a particular set of joints.
  * *joints*: Names of all the joints that are being addressed by this interface.
@@ -95,8 +95,3 @@ The ``FollowJointTrajectory`` or ``GripperCommand`` interfaces on your robot mus
  * /gripper_controller/gripper_action/result
 
 You should also be able to see (using *rostopic info topic_name*) that the topics are published/subscribed to by the controllers on your robot and also by the *move_group* node.
-
-Links
-=====
-
- * Back to :moveit_website:`Moveit Tutorials <tutorials>`

@@ -19,7 +19,7 @@ We will have to generate a YAML configuration file for configuring the 3D sensor
      filtered_cloud_topic: filtered_cloud
 
 The general parameters are:
- * *sensor_plugin*: The name of the plugin that we are using. 
+ * *sensor_plugin*: The name of the plugin that we are using.
 
 Parameters specific to the Point cloud updater are:
  * *point_cloud_topic*: This specifies the topic to listen on for a point cloud.
@@ -47,14 +47,14 @@ We will have to generate a rgbd.yaml configuration file for configuring the 3D s
      filtered_cloud_topic: filtered_cloud
 
 The general parameters are:
- * *sensor_plugin*: The name of the plugin that we are using. 
+ * *sensor_plugin*: The name of the plugin that we are using.
 
 Parameters specific to the Depth Map updater are:
  * *image_topic*: This specifies the topic to listen on for a depth image.
  * *queue_size*: he number of images to queue up
- * *near_clipping_plane_distance*: 
+ * *near_clipping_plane_distance*:
  * *far_clipping_plane_distance*:
- * *shadow_threshold*: 
+ * *shadow_threshold*:
  * *padding_offset*: The size of the padding (in cm).
  * *padding_scale*:
  * *filtered_cloud_topic*: The topic on which the filtered cloud will be published (mainly for debugging). The filtering cloud is the resultant cloud after self-filtering has been performed.
@@ -69,7 +69,7 @@ You will now need to update the *moveit_sensor_manager.launch* file in the "laun
 
  <rosparam command="load" file="$(find my_moveit_config)/config/sensors_kinect.yaml" />
 
-Note that you will need to input the path to the right file you have created above. 
+Note that you will need to input the path to the right file you have created above.
 
 Octomap Configuration
 ^^^^^^^^^^^^^^^^^^^^^
@@ -82,9 +82,4 @@ You will also need to configure the Octomap by adding the following lines into t
 MoveIt! uses an octree based framework to represent the world around it. The *Octomap* parameters above are configuration parameters for this representation:
  * *octomap_frame*: specifies the coordinate frame in which this representation will be stored. If you are working with a mobile robot, this frame should be a fixed frame in the world.
  * *octomap_resolution*: specifies the resolution at which this representation is maintained (in meters).
- * *max_range*: specifies the maximum range value to be applied for any sensor input to this node. 
-
-Links
-=====
-
- * Back to :moveit_website:`Moveit Tutorials <tutorials>`
+ * *max_range*: specifies the maximum range value to be applied for any sensor input to this node.

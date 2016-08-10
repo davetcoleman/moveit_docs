@@ -9,25 +9,25 @@ the robot.
 .. tutorial-formatter:: ../move_group_python_interface_tutorial.py
 
 The entire code
-^^^^^^^^^^^^^^^
+--------------------
 The entire code can be seen :codedir:`here in the moveit_pr2 github project<planning/scripts/move_group_python_interface_tutorial.py>`.
 
 The launch file
-^^^^^^^^^^^^^^^
+--------------------
 The entire launch file is `here
 <https://github.com/ros-planning/moveit_pr2/blob/hydro-devel/pr2_moveit_tutorials/planning/launch/move_group_python_interface_tutorial.launch>`_
 on github. All the code in this tutorial can be run from the
 pr2_moveit_tutorials package that you have as part of your MoveIt! setup.
 
 Running the code
-^^^^^^^^^^^^^^^^
+--------------------^
 
 Roslaunch the launch file to run the code directly from pr2_moveit_tutorials::
 
  roslaunch pr2_moveit_tutorials move_group_python_interface_tutorial.launch
 
 Expected Output
-^^^^^^^^^^^^^^^
+--------------------
 
 In Rviz, we should be able to see the following (there will be a delay of 5-10 seconds between each step):
 

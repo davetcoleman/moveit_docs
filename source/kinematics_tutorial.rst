@@ -80,10 +80,3 @@ Additional Reading
 ^^^^^^^^^^^^^^^^^^
 
  * `RobotState Display <http://moveit.ros.org/wiki/RobotStateDisplay/C%2B%2B_API>`_ - Visualization of the RobotState using Rviz
-
-Links
-^^^^^
-
- * :moveit_core:`RobotModel` Code API
- * :moveit_core:`RobotState` Code API
- * Back to :moveit_website:`Moveit Tutorials <tutorials>`

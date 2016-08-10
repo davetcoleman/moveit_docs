@@ -1,6 +1,6 @@
 Planning Scene/ROS API
 ==================================
-In this tutorial, we will examine the use of planning scene diffs to perform 
+In this tutorial, we will examine the use of planning scene diffs to perform
 two operations:
  * Adding and removing objects into the world
  * Attaching and detaching objects to the robot
@@ -34,8 +34,3 @@ In rviz, you should be able to see the following:
  * Object gets attached to the robot
  * Object gets detached from the robot
  * Object is removed from the planning scene
-
-Links
-=====
-
- * Back to :moveit_website:`Moveit Tutorials <tutorials>`

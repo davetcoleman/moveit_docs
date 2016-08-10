@@ -23,7 +23,7 @@ The set of available parameters include:
  * *kinematics_solver*: The name of your kinematics solver plugin. Note that this must match the name that you specified in the plugin description file, e.g. ``example_kinematics/ExampleKinematicsPlugin``
  * *kinematics_solver_search_resolution*: This specifies the resolution that a solver might use to search over the redundant space for inverse kinematics, e.g. using one of the joints for a 7 DOF arm specified as the redundant joint.
  * *kinematics_solver_timeout*: This is a default timeout specified (in seconds) for each internal iteration that the inverse kinematics solver may perform. A typical iteration (e.g. for a numerical solver) will consist of a random restart from a seed state followed by a solution cycle (for which this timeout is applicable). The solver may attempt multiple restarts - the default number of restarts is defined by the kinematics_solver_attempts parameter below.
- * *kinematics_solver_attempts*: The number of random restarts that will be performed on the solver. Each solution cycle after the restart will have a timeout defined by the kinematics_solver_timeout parameter above. In general, it is better to set this timeout low and fail quickly in an individual solution cycle. 
+ * *kinematics_solver_attempts*: The number of random restarts that will be performed on the solver. Each solution cycle after the restart will have a timeout defined by the kinematics_solver_timeout parameter above. In general, it is better to set this timeout low and fail quickly in an individual solution cycle.
 
 
 The KDL Kinematics Plugin
@@ -31,14 +31,14 @@ The KDL Kinematics Plugin
 
 The KDL kinematics plugin wraps around the numerical inverse kinematics solver provided by the Orocos KDL package.
  * This is the default kinematics plugin currently used by MoveIt!
- * It obeys joint limits specified in the URDF (and will use the safety limits if they are specified in the URDF). 
- * The KDL kinematics plugin currently only works with serial chains. 
+ * It obeys joint limits specified in the URDF (and will use the safety limits if they are specified in the URDF).
+ * The KDL kinematics plugin currently only works with serial chains.
 
 The LMA Kinematics Plugin
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The LMA (Levenberg-Marquardt) kinematics plugin also wraps around a numerical inverse kinematics solver provided by the Orocos KDL package.
- * It obeys joint limits specified in the URDF (and will use the safety limits if they are specified in the URDF). 
+ * It obeys joint limits specified in the URDF (and will use the safety limits if they are specified in the URDF).
  * The LMA kinematics plugin currently only works with serial chains.
  * Usage: ``kinematics_solver: lma_kinematics_plugin/LMAKinematicsPlugin``
 
@@ -47,8 +47,3 @@ Position Only IK
 Position only IK can easily be enabled (only if you are using the KDL Kinematics Plugin) by adding the following line to your kinematics.yaml file (for the particular group that you want to solve IK for)::
 
   position_only_ik: True
-
-Links
-=====
-
- * Back to :moveit_website:`Moveit Tutorials <tutorials>`
