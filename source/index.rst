@@ -1,58 +1,38 @@
-.. MoveIt! documentation master file, created by
-   sphinx-quickstart on Sun Feb 15 02:38:06 2015.
-
-Fetch & Freight Manual
+MoveIt! Documentation
 ----------------------
 
-This manual can also be downloaded as a `PDF <http://docs.moveit.com/MoveIt.pdf>`_.
+Beginner Tutorials
+------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   introduction
-   safety
-   in_the_box
-   robot_hardware
-   computer
-   care_and_feeding
+   move_group_interface_tutorial
+   move_group_python_interface_tutorial
+   moveit_setup_assistant_tutorial
+   visualization_tutorial
 
-Tutorials
----------
+Advanced Tutorials
+------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   visualization
-   gazebo
-   teleop
-   navigation
-   manipulation
-   perception
-   calibration
-   
-Other
------
+   kinematics_tutorial
+   ikfast_tutorial
+   planning_scene_tutorial
+   planning_scene_ros_api_tutorial
+   motion_planning_api_tutorial
+   planning_pipeline_tutorial
+   moveit_fake_controller_manager_tutorial
 
-.. toctree::
-   :maxdepth: 2
-   
-   api_overview
-   release_notes
-   faq
-
-Legal
--------
+Configuration Tutorials
+------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   notices
-   license
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+   kinematics_configuration
+   perception_configuration
+   controller_configuration
+   ompl_interface_tutorial

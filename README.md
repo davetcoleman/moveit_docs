@@ -1,6 +1,6 @@
 # MoveIt! Documentation
 
-This is the source for MoveIt! Motion Planning framework documentation which is hosted at http://moveit.ros.org/
+This is the source for MoveIt! Motion Planning framework documentation. See temporary [host location](http://dav.ee/dave/moveit/html/index.html)
 
 Building New Releases
 ---------------------
