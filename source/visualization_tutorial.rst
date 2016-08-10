@@ -1,5 +1,5 @@
 MoveIt! RViz Plugin Tutorial
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+=============================
 
 MoveIt! comes with a plugin for the ROS Visualizer (RViz). The plugin
 allows you to setup scenes in which the robot will work, generate
@@ -7,7 +7,7 @@ plans, visualize the output and interact directly with a visualized
 robot. We will explore the plugin in this tutorial.
 
 Pre-requisites
-==============
+-------------
 
 You should have completed the `MoveIt! Setup Assistant tutorial
 <http://docs.ros.org/api/moveit_setup_assistant/html/doc/tutorial.html>`_
@@ -23,9 +23,6 @@ run::
 
 This tutorial does **not** require you to actually have a PR2 robot,
 it just needs a set of working robot model files.
-
-Start
-=====
 
 STEP 1: Launch the demo and Configure the Plugin
 ------------------------------------------------
@@ -106,7 +103,7 @@ STEP 3: Interact with the PR2
    :width: 500px
 
 Moving into collision
-^^^^^^^^^^^^^^^^^^^^^
+-------------
 
 Note what happens when you try to move one of the arms into collision
 with the other. The two links that are in collision will turn red.
@@ -126,7 +123,7 @@ checkbox.
    :width: 300px
 
 Moving out of reachable workspace
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------
 
 Note also what happens when you try to move an end-effector out of its
 reachable workspace (sometimes the access denied sign will not
@@ -156,13 +153,8 @@ STEP 4: Use Motion Planning with the PR2
    :width: 700px
 
 What's Next
-@@@@@@@@@@@
+-------------
 
 * `MoveIt! and a simulated robot
   <http://moveit.ros.org/wiki/PR2/Gazebo/Quick_Start>`_ - You can now
   start using MoveIt! with a simulated robot in Gazebo.
-
-Links
-@@@@@
-
-* Back to :moveit_website:`Moveit Tutorials <tutorials>`

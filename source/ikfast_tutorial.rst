@@ -3,22 +3,25 @@ Creating a custom IKFast Plugin
 In this section, we will walk through configuring an IKFast plugin for MoveIt!
 
 What is IKFast?
-^^^^^^^^^^^^^^^
+---------------
+
 *From Wikipedia:*
 IKFast, the Robot Kinematics Compiler, is a powerful inverse kinematics solver provided within Rosen Diankov's OpenRAVE motion planning software. Unlike most inverse kinematics solvers, IKFast can analytically solve the kinematics equations of any complex kinematics chain, and generate language-specific files (like C++) for later use. The end result is extremely stable solutions that can run as fast as 5 microseconds on recent processors
 
 MoveIt! IKFast
-^^^^^^^^^^^^^^
-MoveIt! IKFast is a tool that generates a IKFast kinematics plugin for MoveIt using OpenRave generated cpp files. 
-This tutorial will step you through setting up your robot to utilize the power of IKFast. MoveIt! IKFast is tested on ROS Groovy with Catkin using OpenRave 0.8 with a 6dof and 7dof robot arm manipulator. 
+---------------
+
+MoveIt! IKFast is a tool that generates a IKFast kinematics plugin for MoveIt using OpenRave generated cpp files.
+This tutorial will step you through setting up your robot to utilize the power of IKFast. MoveIt! IKFast is tested on ROS Groovy with Catkin using OpenRave 0.8 with a 6dof and 7dof robot arm manipulator.
 While it works in theory, currently the IKFast plugin generator tool does not work with >7 degree of freedom arms.
 
 Pre-requisites
-^^^^^^^^^^^^^^
+---------------
+
 You should have already created a MoveIt! configuration package for your robot, by using the Setup Assistant.
 
 MoveIt! IKFast Installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------
 Install the MoveIt! IKFast package either from debs or from source.
 
 **Binary Install** ::
@@ -32,7 +35,7 @@ Inside your catkin workspace ::
  git clone https://github.com/ros-planning/moveit_ikfast.git
 
 OpenRAVE Installation
-^^^^^^^^^^^^^^^^^^^^^
+---------------
 OpenRave is available for Ubuntu using these commands::
 
  sudo add-apt-repository ppa:openrave/release
@@ -53,7 +56,7 @@ Edit /usr/lib/python2.7/dist-packages/openravepy/__init__.py to add the followin
 
 
 Create Collada File For Use With OpenRave
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------
 
 First you will need robot description file that is in `Collada or OpenRave <http://openrave.org/docs/latest_stable/collada_robot_extensions/>`_ robot format.
 
@@ -199,10 +202,3 @@ Updating the Plugin
 ^^^^^^^^^^^^^^^^^^^
 
 If any future changes occur with MoveIt! or IKFast, you might need to re-generate this plugin using our scripts. To allow you to easily do this, a bash script is automatically created in the root of your IKFast package, named *update_ikfast_plugin.sh*. This does the same thing you did manually earlier, but uses the IKFast solution header file that is copied into the ROS package.
-
-Links
-=====
-
- * Back to :moveit_website:`Moveit! Tutorials <tutorials>`
-
-

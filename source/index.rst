@@ -1,8 +1,6 @@
 MoveIt! Documentation
 ----------------------
 
-This manual can also be downloaded as a `PDF <http://moveit.ros.org/moveit.pdf>`_.
-
 Beginner Tutorials
 ------------------
 
@@ -14,13 +12,14 @@ Beginner Tutorials
    moveit_setup_assistant_tutorial
    visualization_tutorial
 
-   Advanced Tutorials
+Advanced Tutorials
 ------------------
 
 .. toctree::
    :maxdepth: 1
 
    kinematics_tutorial
+   ikfast_tutorial
    planning_scene_tutorial
    planning_scene_ros_api_tutorial
    motion_planning_api_tutorial
@@ -37,10 +36,3 @@ Configuration Tutorials
    perception_configuration
    controller_configuration
    ompl_interface_tutorial
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

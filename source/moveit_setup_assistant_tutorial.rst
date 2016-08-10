@@ -1,8 +1,8 @@
 MoveIt! Setup Assistant Tutorial
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+==================
 
 Overview
-========
+----------------------
 
 The MoveIt! Setup Assistant is a graphical user interface for
 configuring any robot for use with MoveIt!. Its primary function is
@@ -13,19 +13,15 @@ can go through the `SRDF Overview <http://moveit.ros.org/wiki/SRDF>`_
 page.
 
 Pre-requisites
-==============
+----------------------
 
 MoveIt! and ROS
----------------
 
 * Follow the instructions for :moveit_website:`installing MoveIt!<install>`
   first if you have not already done that.
 
-Using the Setup Assistant
-=========================
-
 STEP 1: Start
--------------
+---------------
 
 * To start the MoveIt! Setup Assistant::
 
@@ -95,7 +91,7 @@ robot in a plane.
 
 * Set the child link as "base_footprint" and the parent frame name as "odom_combined".
 
-* Set the Joint Type as "planar". 
+* Set the Joint Type as "planar".
 
 * Click *Save* and you should see this screen:
 
@@ -116,7 +112,6 @@ of your robot, such as defining what an arm is, or an end effector.
    :width: 700px
 
 Add the right arm
-^^^^^^^^^^^^^^^^^
 
 * We will first add the PR2 right arm as a planning group
 
@@ -157,13 +152,11 @@ Add the right arm
    :width: 700px
 
 Add the left arm
-^^^^^^^^^^^^^^^^
 
 Now, add the left arm in a similar manner choosing the joints from the
 l_shoulder_pan_joint to the l_wrist_roll_joint.
 
 Add the grippers
-^^^^^^^^^^^^^^^^
 
 * We will also add two groups for the right and left end
   effectors. NOTE that you will do this using a different procedure
@@ -191,11 +184,12 @@ Add the grippers
 
 STEP 5: Add Robot Poses
 -----------------------
+
 The Setup Assistant allows you to add certain fixed poses into the
 configuration. This helps if, for example, you want to define a
 certain position of the robot as a **Home** position.
 
-* Click on the *Robot Poses* pane. 
+* Click on the *Robot Poses* pane.
 
 * Click *Add Pose*. Choose a name for the pose. The robot will be in
   its *Default* position where the joint values are set to the
@@ -219,7 +213,7 @@ will designate these two groups as special groups:
 **end-effectors**. Designating these groups as end effector allows
 some special operations to happen on them internally.
 
-* Click on the *End Effectors* pane. 
+* Click on the *End Effectors* pane.
 
 * Click *Add End-Effectors*.
 
@@ -276,41 +270,33 @@ files that you will need to start using MoveIt!
   files you need for MoveIt!
 
 What's Next
-@@@@@@@@@@@
+---------------
+
 
 The MoveIt! Rviz plugin
-=======================
 
 * Start looking at how you can use the generated configuration files
   to play with MoveIt! using the
   `MoveIt! Rviz Plugin <http://moveit.ros.org/wiki/PR2/Rviz_Plugin/Quick_Start>`_.
 
 Setup IKFast Inverse Kinematics Solver
-======================================
 
 * A faster IK solver than the default KDL solver, but takes some
   additional steps to setup:
   `Kinematics/IKFast <http://moveit.ros.org/wiki/Kinematics/IKFast>`_
 
 Additional Reading
-@@@@@@@@@@@@@@@@@@
+---------------------
 
 The SRDF
-========
 
 * See the `SRDF <http://moveit.ros.org/wiki/SRDF>`_ page for more
   details on the components of the SRDF mentioned in this tutorial.
 
 URDF
-====
 
 * The URDF is the native robot description format in ROS and allows
   you to describe the kinematics, inertial, visual and sensing
   properties of your robot. Read through the `URDF specific
   documentation <http://moveit.ros.org/wiki/URDF>`_ to see how the
   URDF is used with MoveIt!
-
-Links
-@@@@@
-
-* Back to :moveit_website:`MoveIt! Tutorials<tutorials>`
