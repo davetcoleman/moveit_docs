@@ -1,4 +1,4 @@
-MoveIt! Setup Assistant Tutorial
+Setup Assistant Tutorial
 ==================
 
 Overview

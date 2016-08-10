@@ -1,4 +1,4 @@
-Creating a custom IKFast Plugin
+IKFast Plugin
 ===============================
 In this section, we will walk through configuring an IKFast plugin for MoveIt!
 

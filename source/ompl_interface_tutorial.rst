@@ -1,4 +1,4 @@
-OMPL Interface Documentation for MoveIt!
+OMPL Interface
 ========================================
 
 OMPL Optimization Objective Tutorial
